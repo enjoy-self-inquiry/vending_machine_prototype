@@ -1,4 +1,5 @@
 class Vendor
+  attr_accessor :sum
   puts "料金を入れてください。"
   puts "注意１：10円玉、50円玉、100円玉、500円玉、1,000円札しか受け付けません。"
   puts "注意２：それ以外の硬貨やお札を入れた場合はお返しします。"
@@ -52,4 +53,15 @@ end
 
 vendor = Vendor.new
 vendor.input_reimburse
+
 inventory = Inventory.new(120, "コーラ", 5)
+
+
+#if vendor.sum > inventory.price
+#  puts "購入できます。コーラをいくつ買いますか？"
+#  how_many = gets.to_i
+#  inventory.nums -= how_many
+#  pay = inventory.price * how_many
+#  puts "#{pay}円の支払いです。"
+#  puts "#{inventory.nums}本の在庫です。"
+#end
