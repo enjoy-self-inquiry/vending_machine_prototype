@@ -1,8 +1,9 @@
 class Vendor
-  attr_accessor :money, :sales, :name, :price, :inventory
+  attr_accessor :money, :sales, :inventory
+  attr_reader :name, :price
   ACCEPTABLE_INPUT = [10, 50, 100, 500, 1000].freeze
 
-  def initialize(money, sales, name, price, inventory)
+  def initialize(name, price, inventory)
     @money = 0
     @sales = 0
     @name = name
